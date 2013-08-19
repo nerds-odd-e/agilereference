@@ -68,18 +68,18 @@ categories:
 		</ul>
 	</div>
   <div class="span8">
-		<div class="panel">
-			<div class="panel-body">
-      {% for category in page.categories %}     
+		{% for category in page.categories %}     
+    <div class="panel">
+		  <div class="panel-body">
         <h3>{{ category.title }}</h3>
 		      <ul>
 			    {% for link in category.links %}
 			      <li><a href="{{ link.url }}">{{ link.name }}</a></li>
 			    {% endfor %} 
 		      </ul>	
-		    {% endfor %}
-		  </div>
+      </div>
 	  </div>
+		{% endfor %}		 
 	</div>
 </div>
 
