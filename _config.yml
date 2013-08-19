@@ -1,5 +1,4 @@
 name: Agile Reference 
-safe: true
 lsi: false
 markdown: redcarpet
 pygments: true

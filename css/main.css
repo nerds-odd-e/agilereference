@@ -1,6 +1,13 @@
-#header {
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
+
+.page-header a:hover {
+	text-decoration: none;
+}
+
+.page-header h1 {
+	text-shadow: 1px 1px 1px #aaa;
+}
+
+.page-header a {
+	color: #2d2d2d;
 }
 

@@ -1,14 +1,86 @@
 ---
 layout: default
 title: Agile Reference 
-description: A list of recommended introductory materials for learning Agile practices. 
+description: A list of recommended and freely available introductory materials for learning Agile practices. 
+
+categories:
+- title: "Scrum"
+  links:
+  - name: "The Scrum Primer - Pete Deemer, Gabrielle Benefield, Craig Larman, Bas Vodde"
+    url: "http://scrumprimer.org"
+
+- title: "General overview to technical practices"
+  links: 
+  - name: "Just Do It: A Quick Introduction To Agile's Technical Practices - Hacker Chick"   
+    url: "http://www.thehackerchickblog.com/2010/02/just-do-it-quick-intro-to-agiles.html" 
+
+- title: "Collective Code Ownership"
+  links:
+  - name: "The Art Of Agile Development: Collective Code Ownership - James Shore"
+    url: "http://jamesshore.com/Agile-Book/collective_code_ownership.html"
+  - name: "Collective Ownership - Don Wells"
+    url: "http://www.extremeprogramming.org/rules/collective.html"		
+  - name: "Code Ownership - Martin Fowler"   
+    url: "http://martinfowler.com/bliki/CodeOwnership.html"
+ 
+- title: "Continuous Integration"     
+  links:
+  - name: "Continuous Integration - Martin Fowler"
+    url: "http://martinfowler.com/articles/continuousIntegration.html" 
+  - name: "Continuous Integration on a Dollar a Day - James Shore" 
+    url: "http://jamesshore.com/Blog/Continuous-Integration-on-a-Dollar-a-Day.html"
+
+- title: "Refactoring"
+  links: 
+  - name: "Code Smell - Martin Fowler" 
+    url: "http://martinfowler.com/bliki/CodeSmell.html"
+  - name: "The Art of Agile Development: Refactoring - James Shore"
+    url: "http://jamesshore.com/Agile-Book/refactoring.html"
+
+- title: "Test-Driven Development"  
+  links:
+  - name: "The Three Laws of Test-Driven Development - Uncle Bob Martin"
+    url: "http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd"
+  - name: "The Art of Agile Development: Test-Driven Development - James Shore"
+    url: "http://jamesshore.com/Agile-Book/test_driven_development.html"
+
+- title: "Emergent Design"
+  links:
+  - name: "What is Software Design - Jack Reeves"
+    url: "http://www.bleading-edge.com/Publications/C++Journal/Cpjour2.htm"
+  - name: "Is Design Dead? - Martin Fowler"
+    url: "http://martinfowler.com/articles/designDead.html"
+
+- title: "Acceptance Test-Driven Development (Specification by Example)"
+  links:
+  - name: "Acceptance Test-Driven Development with RobotFramework - Craig Larman, Bas Vodde"
+    url: "http://code.google.com/p/robotframework/wiki/ATDDWithRobotFrameworkArticle"	
+
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="row">
+  <div class="span4">
+		<ul class="list-group">
+			<div class="list-group-item active">Articles</div>
+			{% for category in page.categories %}
+			<a class="list-group-item">{{ category.title }}</a>
+			{% endfor %}
+		</ul>
+	</div>
+  <div class="span8">
+		<div class="panel">
+			<div class="panel-body">
+      {% for category in page.categories %}     
+        <h3>{{ category.title }}</h3>
+		      <ul>
+			    {% for link in category.links %}
+			      <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+			    {% endfor %} 
+		      </ul>	
+		    {% endfor %}
+		  </div>
+	  </div>
+	</div>
 </div>
+
+
