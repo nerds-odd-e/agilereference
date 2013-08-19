@@ -59,11 +59,11 @@ categories:
 ---
 
 <div class="row">
-  <div class="span4">
+  <div class="span4 side-nav">
 		<ul class="list-group">
 			<div class="list-group-item active">Articles</div>
 			{% for category in page.categories %}
-			<a class="list-group-item">{{ category.title }}</a>
+			<a href="#category{{ forloop.index }}" class="list-group-item">{{ category.title }}</a>
 			{% endfor %}
 		</ul>
 	</div>
@@ -71,7 +71,7 @@ categories:
 		{% for category in page.categories %}     
     <div class="panel">
 		  <div class="panel-body">
-        <h3>{{ category.title }}</h3>
+				<h3><div id="category{{ forloop.index }}">{{ category.title }}</div></h3>
 		      <ul>
 			    {% for link in category.links %}
 			      <li><a href="{{ link.url }}">{{ link.name }}</a></li>
