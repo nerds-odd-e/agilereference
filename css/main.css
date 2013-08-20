@@ -1,3 +1,15 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+body {
+  font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.428571429;
+  color:#666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 500;
+}	
 
 .page-header a:hover {
 	text-decoration: none;
@@ -9,5 +21,45 @@
 
 .page-header a {
 	color: #2d2d2d;
+}
+
+.panel, .side-nav{
+	margin-bottom: 2em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.panel-body {
+	margin: 1em;
+}
+
+.side-nav {
+  width: 270px;
+}
+
+@media (min-width: 1200px) {
+  .side-nav {
+		width: 350px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .side-nav {
+	  width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .side-nav {
+		position: relative;
+		width: auto;
+  }
+
+}
+
+li {
+	margin: 1em auto;
 }
 
