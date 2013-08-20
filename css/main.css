@@ -37,6 +37,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .side-nav {
   width: 270px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 @media (min-width: 1200px) {
@@ -59,7 +61,15 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-li {
+.panel-body li {
 	margin: 1em auto;
+}
+
+.side-bar li  {
+	line-height: 2em;
+}
+
+.affix {
+	top: 2em;
 }
 
