@@ -60,7 +60,7 @@ categories:
 
 <div class="row">
   <div class="span4 side-bar">
-		<ul class="nav nav-list side-nav affix">
+		<ul class="nav nav-list side-nav" data-spy="affix" data-offset-top="100">
 			{% for category in page.categories %}
 			<li>
 			  <a href="#category{{ forloop.index }}">{{ category.title }}</a>
@@ -75,10 +75,13 @@ categories:
 				<h3><div>{{ category.title }}</div></h3>
 		      <ul>
 			    {% for link in category.links %}
-			      <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+			      <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
 			    {% endfor %} 
 		      </ul>	
       </div>
+			<div class="go_up">
+			 	<a href="#header">top <i class="icon-arrow-up"></i></a>
+			</div>
 	  </div>
 		{% endfor %}		 
 	</div>
