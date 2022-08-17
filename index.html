@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Agile Reference 
-description: A list of recommended and freely available introductory materials for learning Agile practices. 
+title: Agile Reference
+description: A list of recommended and freely available introductory materials for learning Agile practices. (v1.1)
 
 categories:
 - title: "Scrum"
@@ -10,34 +10,34 @@ categories:
     url: "http://scrumprimer.org"
 
 - title: "General overview to technical practices"
-  links: 
-  - name: "Just Do It: A Quick Introduction To Agile's Technical Practices - Hacker Chick"   
-    url: "http://www.thehackerchickblog.com/2010/02/just-do-it-quick-intro-to-agiles.html" 
+  links:
+  - name: "Just Do It: A Quick Introduction To Agile's Technical Practices - Hacker Chick"
+    url: "http://www.thehackerchickblog.com/2010/02/just-do-it-quick-intro-to-agiles.html"
 
 - title: "Collective Code Ownership"
   links:
   - name: "The Art Of Agile Development: Collective Code Ownership - James Shore"
     url: "http://jamesshore.com/Agile-Book/collective_code_ownership.html"
   - name: "Collective Ownership - Don Wells"
-    url: "http://www.extremeprogramming.org/rules/collective.html"		
-  - name: "Code Ownership - Martin Fowler"   
+    url: "http://www.extremeprogramming.org/rules/collective.html"
+  - name: "Code Ownership - Martin Fowler"
     url: "http://martinfowler.com/bliki/CodeOwnership.html"
- 
-- title: "Continuous Integration"     
+
+- title: "Continuous Integration"
   links:
   - name: "Continuous Integration - Martin Fowler"
-    url: "http://martinfowler.com/articles/continuousIntegration.html" 
-  - name: "Continuous Integration on a Dollar a Day - James Shore" 
+    url: "http://martinfowler.com/articles/continuousIntegration.html"
+  - name: "Continuous Integration on a Dollar a Day - James Shore"
     url: "http://jamesshore.com/Blog/Continuous-Integration-on-a-Dollar-a-Day.html"
 
 - title: "Refactoring"
-  links: 
-  - name: "Code Smell - Martin Fowler" 
+  links:
+  - name: "Code Smell - Martin Fowler"
     url: "http://martinfowler.com/bliki/CodeSmell.html"
   - name: "The Art of Agile Development: Refactoring - James Shore"
     url: "http://jamesshore.com/Agile-Book/refactoring.html"
 
-- title: "Test-Driven Development"  
+- title: "Test-Driven Development"
   links:
   - name: "The Three Laws of Test-Driven Development - Uncle Bob Martin"
     url: "http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd"
@@ -54,7 +54,7 @@ categories:
 - title: "Acceptance Test-Driven Development (Specification by Example)"
   links:
   - name: "Acceptance Test-Driven Development with RobotFramework - Craig Larman, Bas Vodde"
-    url: "http://code.google.com/p/robotframework/wiki/ATDDWithRobotFrameworkArticle"	
+    url: "http://code.google.com/p/robotframework/wiki/ATDDWithRobotFrameworkArticle"
 
 ---
 
@@ -64,26 +64,26 @@ categories:
 			{% for category in page.categories %}
 			<li>
 			  <a href="#category{{ forloop.index }}">{{ category.title }}</a>
-			</li>	
+			</li>
 			{% endfor %}
 		</ul>
 	</div>
   <div class="span8">
-		{% for category in page.categories %}     
+		{% for category in page.categories %}
     <div id="category{{ forloop.index }}" class="panel">
 		  <div class="panel-body">
 				<h3><div>{{ category.title }}</div></h3>
 		      <ul>
 			    {% for link in category.links %}
 			      <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
-			    {% endfor %} 
-		      </ul>	
+			    {% endfor %}
+		      </ul>
       </div>
 			<div class="go_up">
 			 	<a href="#header">top <i class="icon-arrow-up"></i></a>
 			</div>
 	  </div>
-		{% endfor %}		 
+		{% endfor %}
 	</div>
 </div>
 
