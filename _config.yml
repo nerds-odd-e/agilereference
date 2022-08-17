@@ -1,5 +1,6 @@
-name: Agile Reference 
+name: Agile Reference
 safe: true
 lsi: false
 markdown: redcarpet
+highlighter: rouge
 pygments: true
